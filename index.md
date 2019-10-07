@@ -2,11 +2,11 @@ Operator Lifecycle Book
 ===
 
 
- - [Introduction](https://hackmd.io/@operatorframework/toc)
+ - [Introduction](https://operator-framework.github.io/olm-book/docs/intro)
  
 # Foundational Concepts
 
- - [What is an Operator?](https://hackmd.io/@operatorframework/what-is-an-operator)
+ - [What is an Operator?](https://operator-framework.github.io/olm-book/docs/what-is-an-operator)
  - [Why would I use OLM?](test)
  - [What does OLM enable?](https://operator-framework.github.io/olm-book/docs/what-does-olm-enable)
  - [Operators on cluster](test)
