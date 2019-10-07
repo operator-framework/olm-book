@@ -8,7 +8,7 @@ Operator Lifecycle Book
 
  - [What is an Operator?](https://hackmd.io/@operatorframework/what-is-an-operator)
  - [Why would I use OLM?](test)
- - [What does OLM allow me to do?](test)
+ - [What does OLM enable?](https://operator-framework.github.io/olm-book/docs/what-does-olm-enable)
  - [Operators on cluster](test)
 
 # Under the hood
