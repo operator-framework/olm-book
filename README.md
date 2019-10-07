@@ -1,23 +1,11 @@
-# Initial page
+# Operator Lifecycle Book
 
-## Getting Super Powers
+## Adding a new page
 
-Becoming a super hero is a fairly straight forward process:
+ - Clone this repo
+ - Make a new markdown doc in `docs`
+ - Update or create a new link in `index.med` to point to the doc in `docs`
+ 
+ ### Example
 
-```
-$ give me super-powers
-```
-
-{% hint style="info" %}
- Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
-
-Once you're strong enough, save the world:
-
-```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
-
-
-
+ 
