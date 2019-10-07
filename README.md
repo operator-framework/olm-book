@@ -10,3 +10,5 @@
    - Example: `[What does OLM enable](https://operator-framework.github.io/olm-book/docs/what-does-olm-enable)`?
  - Make a PR with both changes
  - See the updated links in https://operator-framework.github.io/olm-book
+ 
+You can also use the in-browser editor to make PRs!
