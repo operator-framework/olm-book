@@ -54,3 +54,7 @@
 - [When and how should a running Operator express that it is not upgradeable?](https://)
 - [When should an Operator upgrade its Operands?](https://)
 - [How should an Operator Author create and package an Operator for a singleton operand?](https://)
+
+## OLM on OCP (OpenShift Container Platform)
+
+- [Important changes by OCP release](docs/openshift/important-changes-by-release.md)
