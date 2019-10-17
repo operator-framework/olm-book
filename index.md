@@ -25,7 +25,8 @@
 ## Basic Use Cases
 
 - [How do I install OLM?](https://)
-- [How do I package my Operator for OLM?](https://)
+- [How do I package my Operator for
+  OLM?](https://operator-framework.github.io/olm-book/docs/packaging-an-operator)
 - [How do I validate the package?](https://)
 - [How do I install my Operator with OLM?](https://)
 - [How do I make my Operator part of a catalog?](https://)
