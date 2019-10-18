@@ -1,0 +1,29 @@
+# How do I list Operators available to install?
+
+There is an `APIService` in OLM named `PackageManifest` that contains information existing `CatalogSources`, which is essentially a repository of CSVs, CRDs, and packages that define an application, and their `ConfigMaps` in the cluster. By querying that API, you can see the list of available operators.
+
+## PackageManifest Commands
+
+You can use these example commands via either OpenShift CLI (oc) or kubectl CLI (kubectl) to list available operators in the cluster.
+
+```bash
+$ oc get packagemanifest
+```
+
+or
+
+```bash
+$ kubectl get packagemanifest
+```
+
+The list of available operators will be displayed as an output of those above commands:
+
+```bash
+$ kubectl get packagemanifest
+NAME                               CATALOG               AGE
+cassandra-operator                 Community Operators   26m
+etcd                               Community Operators   26m
+postgres-operator                  Community Operators   26m
+prometheus                         Community Operators   26m
+wildfly                            Community Operators   26m
+```
