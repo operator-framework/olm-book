@@ -15,7 +15,7 @@
 - [Operator bundles](test)
 - [Operator catalogs](test)
 - [Subscriptions](test)
-- [Operator dependencies and requirements](test)
+- [Operator dependencies and requirements](https://operator-framework.github.io/olm-book/docs/operator-dependencies-and-requirements)
 - [Operator update graphs and channels](test)
 - [Operator versioning and release strategies](test)
 - [Operand support matrices](test)
