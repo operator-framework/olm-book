@@ -20,7 +20,7 @@
 - [Operator versioning and release strategies](test)
 - [Operand support matrices](test)
 - [Operator install modes](test)
-- [Operator scoping](test)
+- [Operator scoping](https://operator-framework.github.io/olm-book/docs/operator-scoping)
 
 ## Basic Use Cases
 
