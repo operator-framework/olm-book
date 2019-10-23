@@ -31,7 +31,7 @@
 - [How do I install my Operator with OLM?](https://)
 - [How do I make my Operator part of a catalog?](https://)
 - [How do I list Operators available to install?](https://)
-- [How do I uninstall an Operator?](https://)
+- [How do I uninstall an Operator?](https://operator-framework.github.io/olm-book/docs/uninstall-an-operator/)
 - [How do I discover the presence/availability of an Operator?](https://)
 - [How do I troubleshoot a failing installation?](https://)
 - [How do I uninstall OLM?](https://)
