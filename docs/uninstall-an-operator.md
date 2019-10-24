@@ -5,7 +5,7 @@ In order to uninstall an operator, you need to delete the following resources:
 - Subscription
 - ClusterServiceVersion (CSV)
 
-Both `Subscription` and `ClusterServiceVersion` are namespace objects meaning you need to delete a `Subscription` and a `CSV` in a specific namespace where you install the operator into.
+Both `Subscription` and `CSV` are namespaced objects meaning you need to delete a `Subscription` and a `CSV` in a specific namespace where you install the operator into.
 
 ## Delete a Subscription
 
@@ -33,4 +33,4 @@ You can delete the `ClusterServiceVersion` in the namespace that the operator wa
 $ kubectl delete clusterserviceversion <csv-name> -n <namespace>
 ```
 
-By deleting `ClusterServiceVersion`, it will delete the operator's resources that OLM created for the operator such as deployment, pod(s), RBAC, and others. This also deletes any corresponding CSVs that OLM "Copied" into other namespaces watched by the operator.
+By deleting `ClusterServiceVersion`, it will delete the operator's resources that OLM created for the operator such as deployment, pod(s), RBAC, and others. However, `CustomResourceDefinition` (CRD), that is installed by the operator, won't get deleted during uninstalling process. Deleting `CRD` will resolve into deleting all instances of that `CRD` which may be used by other operators. `CRD` can be deleted manually if needed. Furthermore, deleting a `CSV` also deletes any corresponding CSVs that OLM "Copied" into other namespaces watched by the operator.
