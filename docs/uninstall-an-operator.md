@@ -34,3 +34,10 @@ $ kubectl delete clusterserviceversion <csv-name> -n <namespace>
 ```
 
 By deleting `ClusterServiceVersion`, it will delete the operator's resources that OLM created for the operator such as deployment, pod(s), RBAC, and others. However, `CustomResourceDefinition` (CRD), that is installed by the operator, won't get deleted during uninstalling process. Deleting `CRD` will resolve into deleting all instances of that `CRD` which may be used by other operators. `CRD` can be deleted manually if needed. Furthermore, deleting a `CSV` also deletes any corresponding CSVs that OLM "Copied" into other namespaces watched by the operator.
+
+Alternatively, you can delete both `Subscription` and its `CSV` using a sequence of commands:
+```bash
+$ CSV=kubectl delete subscription <subscription-name> -n <namespace> -o json | jq '.status.installedCSV'
+$ kubectl delete subscription <subscription-name> -n <namespace>
+$ kubectl delete csv $CSV -n <namespace>
+```
