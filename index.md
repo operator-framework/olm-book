@@ -54,6 +54,7 @@
 - [When and how should a running Operator express that it is not upgradeable?](docs/)
 - [When should an Operator upgrade its Operands?](docs/)
 - [How should an Operator Author create and package an Operator for a singleton operand?](docs/)
+- [How do I snapshot a Quay Appregistry operator catalog?](docs/snapshot-appr-catalog.md)
 
 ## Troubleshooting
 
