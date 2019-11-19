@@ -14,7 +14,7 @@
 - [Operands](docs/)
 - [Operator bundles](docs/)
 - [Operator catalogs](docs/)
-- [Subscriptions](docs/)
+- [Subscriptions](docs/subscriptions.md)
 - [Operator dependencies and requirements](docs/operator-dependencies-and-requirements.md)
 - [Operator update graphs and channels](docs/)
 - [Operator versioning and release strategies](docs/)
