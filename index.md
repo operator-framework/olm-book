@@ -29,7 +29,7 @@
   OLM?](https://operator-framework.github.io/olm-book/docs/packaging-an-operator)
 - [How do I validate the package?](https://)
 - [How do I make my Operator part of a catalog?](https://)
-- [How do I install my Operator with OLM?](https://)
+- [How do I install my Operator with OLM?](docs/how-do-i-install-my-operator-with-olm.md)
 - [How do I list Operators available to install?](https://operator-framework.github.io/olm-book/docs/list-available-operators)
 - [How do I uninstall an Operator?](https://operator-framework.github.io/olm-book/docs/uninstall-an-operator/)
 - [How do I discover the presence/availability of an Operator?](https://)
