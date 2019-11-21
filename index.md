@@ -27,7 +27,7 @@
 - [How do I install OLM?](https://operator-framework.github.io/olm-book/docs/install-olm)
 - [How do I package my Operator for
   OLM?](https://operator-framework.github.io/olm-book/docs/packaging-an-operator)
-- [How do I validate the package?](https://)
+- [How do I validate the package?](docs/validate-package.md)
 - [How do I make my Operator part of a catalog?](https://)
 - [How do I install my Operator with OLM?](https://)
 - [How do I list Operators available to install?](https://operator-framework.github.io/olm-book/docs/list-available-operators)
