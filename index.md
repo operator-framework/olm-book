@@ -58,7 +58,7 @@
 ## Troubleshooting
 
 - [Troubleshoot OLM installation](docs/)
-- [Troubleshoot operator installation with OLM](docs/)
+- [Troubleshoot operator installation with OLM](docs/troubleshooting.md)
 
 ## OLM on OCP (OpenShift Container Platform)
 
