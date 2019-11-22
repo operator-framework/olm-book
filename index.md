@@ -5,33 +5,32 @@
 ## Foundational Concepts
 
 - [What is an Operator?](https://operator-framework.github.io/olm-book/docs/what-is-an-operator)
-- [Why would I use OLM?](test)
+- [Why would I use OLM?](https://)
 - [What does OLM enable?](https://operator-framework.github.io/olm-book/docs/what-does-olm-enable)
-- [Operators on cluster](test)
+- [Operators on cluster](https://)
 
 ## Under the hood
 
-- [Operands](test)
-- [Operator bundles](test)
-- [Operator catalogs](test)
-- [Subscriptions](test)
+- [Operands](https://)
+- [Operator bundles](https://)
+- [Operator catalogs](https://)
+- [Subscriptions](https://)
 - [Operator dependencies and requirements](https://operator-framework.github.io/olm-book/docs/operator-dependencies-and-requirements)
-- [Operator update graphs and channels](test)
-- [Operator versioning and release strategies](test)
-- [Operand support matrices](test)
-- [Operator install modes](test)
+- [Operator update graphs and channels](https://)
+- [Operator versioning and release strategies](https://)
+- [Operand support matrices](https://)
+- [Operator install modes](https://)
 - [Operator scoping](https://operator-framework.github.io/olm-book/docs/operator-scoping)
 
 ## Basic Use Cases
 
 - [How do I install OLM?](https://operator-framework.github.io/olm-book/docs/install-olm)
-- [How do I package my Operator for
-  OLM?](https://operator-framework.github.io/olm-book/docs/packaging-an-operator)
+- [How do I package my Operator for OLM?](https://operator-framework.github.io/olm-book/docs/packaging-an-operator)
 - [How do I validate the package?](https://)
 - [How do I make my Operator part of a catalog?](https://)
-- [How do I install my Operator with OLM?](docs/how-do-i-install-my-operator-with-olm.md)
+- [How do I install my Operator with OLM?](https://operator-framework.github.io/olm-book/docs/how-do-i-install-my-operator-with-olm)
 - [How do I list Operators available to install?](https://operator-framework.github.io/olm-book/docs/list-available-operators)
-- [How do I uninstall an Operator?](https://operator-framework.github.io/olm-book/docs/uninstall-an-operator/)
+- [How do I uninstall an Operator?](https://operator-framework.github.io/olm-book/docs/uninstall-an-operator)
 - [How do I discover the presence/availability of an Operator?](https://operator-framework.github.io/olm-book/docs/discover-operator-presence)
 - [How do I troubleshoot a failing installation?](https://)
 - [How do I uninstall OLM?](https://)
