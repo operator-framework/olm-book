@@ -32,7 +32,7 @@
 - [How do I list Operators available to install?](docs/list-available-operators.md)
 - [How do I uninstall an Operator?](docs/uninstall-an-operator.md)
 - [How do I discover the presence/availability of an Operator?](docs/discover-operator-presence.md)
-- [How do I uninstall OLM?](docs/)
+- [How do I uninstall OLM?](docs/uninstall-olm.md)
 
 ## Advanced Use Cases
 
