@@ -62,4 +62,6 @@
 
 ## OLM on OCP (OpenShift Container Platform)
 
+- [FAQ](docs/openshift/faq.md)
 - [Important changes by OCP release](docs/openshift/important-changes-by-release.md)
+- [Operator Marketplace](docs/openshift/operator-marketplace.md)
