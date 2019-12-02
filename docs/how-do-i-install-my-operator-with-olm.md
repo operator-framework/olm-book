@@ -1,6 +1,6 @@
 # How do I install my operator with OLM?
 
-[Once you've made your packaged operator available in a catalog](./how-do-i-package-my-operator-for-olm) it will appear in the `packagemanifest` list from which the Operators to install are selected. See [How do I list available Operators](./list-available-operators.md#information-relevant-for-installation) how to retrieve the required information from the `PackageServer` in order start an installation of an Operator.
+[Once you've made your packaged operator available in a catalog](packaging-an-operator.md) it will appear in the `packagemanifest` list from which the Operators to install are selected. See [How do I list available Operators](list-available-operators.md#information-relevant-for-installation) how to retrieve the required information from the `PackageServer` in order start an installation of an Operator.
 
 ## Install with automatic updates enabled
 
@@ -121,7 +121,7 @@ NAME                    READY   UP-TO-DATE   AVAILABLE   AGE
 my-operator             1/1     1            1           9m48s
 ```
 
-If the ClusterServiceVersion fails to show up or does not reach the `Succeeded` phase, please check the [troubleshooting documentation](https://) to debug your installation.
+If the ClusterServiceVersion fails to show up or does not reach the `Succeeded` phase, please check the [troubleshooting documentation](troubleshooting.md) to debug your installation.
 
 ## Install with manual updates
 

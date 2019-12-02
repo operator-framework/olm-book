@@ -147,7 +147,7 @@ spec:
 
 Any operator tied to this `OperatorGroup` will now be confined to the permission(s) granted to the specified `ServiceAccount`. If the operator asks for permission(s) that are outside the scope of the `ServiceAccount` the install will fail with appropriate error(s).
 
-An example of scoping an operator can be found [here]("https://operator-framework.github.io/olm-book/docs/how-do-i-scope-down-an-operator).
+An example of scoping an operator can be found [here](./).
 
 ### Configuring the End User Experience
 

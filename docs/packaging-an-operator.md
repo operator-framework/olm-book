@@ -27,7 +27,7 @@ These manifests consist of:
 
 Building a minimal `ClusterServiceVersion` from these requires transplanting the contents of the Operator definition and the RBAC definitions into a CSV. Together, your CSV and CRDs will form the package that you give to OLM to install an operator.
 
-#### Basic Metadata [Optional]
+#### Basic Metadata \[Optional\]
 
 Let's start with a CSV that only contains some descriptive metadata:
 
@@ -55,7 +55,7 @@ spec:
 
 Most of these fields are optional, but they provide an opportunity to describe your operator to potential or current users.
 
-#### Installation Metadata [Required]
+#### Installation Metadata \[Required\]
 
 The next section to add to the CSV is the Install Strategy - this tells OLM about the runtime components of your operator and their requirements. 
 
@@ -139,7 +139,7 @@ If you have an existing CSV `csv.yaml` (refer to the example from Basic Metadata
 $ faq -f yaml -o yaml --slurp '.[0].spec.install = {strategy: "deployment", spec:{ deployments: [{name: .[1].metadata.name, template: .[1].spec }], permissions: [{serviceAccountName: .[3].metadata.name, rules: .[2].rules }]}} | .[0]' csv.yaml operator.yaml role.yaml service_account.yaml
 ```
 
-#### Defining APIs [Required]
+#### Defining APIs \[Required\]
 
 By definition, operators are programs that can talk to the Kubernetes API. Often, they are also programs that *extend* the Kubernetes API, by providing an interface via `CustomResourceDefinition`s or, less frequently, `APIService`s. 
 
@@ -204,7 +204,7 @@ spec:
       kind: Memcached
 ```
 
-##### NativeAPIs [recommended]
+##### NativeAPIs \[recommended\]
 
 There are often cases where you wish to depend on an API that is either provided natively by the platform (i.e. `Pod`) or sometimes by another operator that is outside the control of OLM.
 

@@ -88,7 +88,7 @@ If the OLM operator encounters an unrecoverable error when attempting to install
 
 >Note: It is possible that the Status is missing, which suggests that the OLM operator is encountering an issue when processing the `CSV` in a very early stage. You should respond by reviewing the logs of the OLM operator.
 
-You should typically pay special attention to the information within the `status.reason` and `status.message` fields. Please look in the [#failed-csv-reasons]
+You should typically pay special attention to the information within the `status.reason` and `status.message` fields. Please look in the [#Failed CSV reasons](#failed-csv-reasons) section.
 
 If the `Status` block does not provide enough information, check the [OLM operator's logs](#how-to-view-the-olm-operator-logs).
 
