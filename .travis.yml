@@ -3,5 +3,5 @@ rust:
   - 1.34.0
 cache: cargo
 script:
-  - cargo install --git https://github.com/crawford/marker.git
+  - cargo install --force --git https://github.com/crawford/marker.git
   - marker
