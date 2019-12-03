@@ -1,6 +1,6 @@
 # How do I install my operator with OLM? 
 
-[Once you've made your operator available in a catalog](https://), [or you've chosen an operator from an existing catalog](https:// ), you can install your operator by creating a Subscription to a specific channel. 
+[Once you've made your operator available in a catalog](docs/), [or you've chosen an operator from an existing catalog](docs/ ), you can install your operator by creating a Subscription to a specific channel. 
 ```yaml
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -46,5 +46,5 @@ NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
 <name-of-your-operator>      1/1     1            1           9m48s
 ```
 
-If the ClusterServiceVersion fails to show up or does not reach the `Succeeded` phase, please check the [troubleshooting documentation](https://) to debug your installation.  
+If the ClusterServiceVersion fails to show up or does not reach the `Succeeded` phase, please check the [troubleshooting documentation](troubleshooting.md#clusterserviceversion-troubleshooting) to debug your installation.  
     
