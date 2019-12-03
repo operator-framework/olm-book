@@ -37,7 +37,7 @@
 
 ## Advanced Use Cases
 
-- [When do I need to update my Operator?](docs/)
+- [When do I need to update my Operator?](docs/when-to-update-my-operator.md)
 - [How do I create an updated version of my Operator?](docs/)
 - [How do I test an update before shipping?](docs/)
 - [How do I ship an updated version of my Operator?](docs/)
