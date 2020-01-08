@@ -2,6 +2,8 @@
 
 - [Introduction](docs/intro.md)
 
+- [Glossary](docs/glossary.md)
+
 ## Foundational Concepts
 
 - [What is an Operator?](docs/what-is-an-operator.md)
