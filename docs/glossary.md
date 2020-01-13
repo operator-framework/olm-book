@@ -56,7 +56,11 @@ The following [CustomResourceDefinitions](https://kubernetes.io/docs/tasks/acces
 
 **Definition**: The channel defines a stream of updates for an operator and is used to roll out updates for subscribers. The head points at the latest version of that channel. For example, a stable channel would have all stable versions of an operator arranged from the earliest to the latest. An operator can have several channels, and a subscription binding to a certain channel would only look for updates in that channel.
 
-### Catalog Image 
+### Channel Head
+
+**Definition**: Head refers to the latest known update in a particular [channel](#Channel).
+
+### Catalog Image
 
 **Definition**: A catalog image is a containerized datastore that describes a set of operator and update metadata that can be installed onto a cluster via OLM.
 
@@ -68,7 +72,7 @@ The following [CustomResourceDefinitions](https://kubernetes.io/docs/tasks/acces
 
 **Aliases**: Operator Dependency, GVK Dependency, API Dependency, Required CRD
 
-### Index 
+### Index
 
 **Definition**: The Index refers to an image of a database (a database snapshot) that contains information about Operator bundles including CSVs, CRDs, etc of all versions. This index can host a history of used operators on a cluster and be maintained by adding or removing operators.
 
@@ -81,7 +85,7 @@ The following [CustomResourceDefinitions](https://kubernetes.io/docs/tasks/acces
 
 ### Registry
 
-**Definition**: A database which stores (Bundle Images)[#BundleImage] of Operators, each with all of its latest/historical versions in all [channels](#Channel). 
+**Definition**: A database which stores [Bundle Images](#Bundle-Image) of Operators, each with all of its latest/historical versions in all [channels](#Channel).
 
 ### Upgrade Graph
 
