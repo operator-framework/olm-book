@@ -2,6 +2,8 @@
 
 - [Introduction](docs/intro.md)
 
+- [Glossary](docs/glossary.md)
+
 ## Foundational Concepts
 
 - [What is an Operator?](docs/what-is-an-operator.md)
@@ -14,7 +16,7 @@
 - [Operands](docs/)
 - [Operator bundles](docs/)
 - [Operator catalogs](docs/)
-- [Subscriptions](docs/)
+- [Subscriptions](docs/subscriptions.md)
 - [Operator dependencies and requirements](docs/operator-dependencies-and-requirements.md)
 - [Operator update graphs and channels](docs/)
 - [Operator versioning and release strategies](docs/)
@@ -32,12 +34,11 @@
 - [How do I list Operators available to install?](docs/list-available-operators.md)
 - [How do I uninstall an Operator?](docs/uninstall-an-operator.md)
 - [How do I discover the presence/availability of an Operator?](docs/discover-operator-presence.md)
-- [How do I troubleshoot a failing installation?](docs/)
-- [How do I uninstall OLM?](docs/)
+- [How do I uninstall OLM?](docs/uninstall-olm.md)
 
 ## Advanced Use Cases
 
-- [When do I need to update my Operator?](docs/)
+- [When do I need to update my Operator?](docs/when-to-update-my-operator.md)
 - [How do I create an updated version of my Operator?](docs/)
 - [How do I test an update before shipping?](docs/)
 - [How do I ship an updated version of my Operator?](docs/)
@@ -54,6 +55,8 @@
 - [When and how should a running Operator express that it is not upgradeable?](docs/)
 - [When should an Operator upgrade its Operands?](docs/)
 - [How should an Operator Author create and package an Operator for a singleton operand?](docs/)
+- [How do I snapshot a Quay Appregistry operator catalog?](docs/snapshot-appr-registry.md)
+- [How do I ship an operator that supports multiple node architectures?](docs/multiarch.md)
 
 ## Troubleshooting
 
