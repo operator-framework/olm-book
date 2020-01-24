@@ -17,7 +17,7 @@ This is all in service of ensuring that when a user installs an operator from OL
 
 ### Starting from an existing set of operator manifests
 
-For this example, we'll use the example manifests from [the example memcached operator](https://github.com/operator-framework/operator-sdk-samples/tree/master/memcached-operator/deploy).
+For this example, we'll use the example manifests from [the example memcached operator](https://github.com/operator-framework/operator-sdk-samples/tree/master/go/memcached-operator/deploy).
 
 These manifests consist of:
 
@@ -57,7 +57,7 @@ Most of these fields are optional, but they provide an opportunity to describe y
 
 #### Installation Metadata (Required)
 
-The next section to add to the CSV is the Install Strategy - this tells OLM about the runtime components of your operator and their requirements. 
+The next section to add to the CSV is the Install Strategy - this tells OLM about the runtime components of your operator and their requirements.
 
 Here is an example of the basic structure of an install strategy:
 
@@ -74,7 +74,7 @@ spec:
     # spec for the deployment strategy is a list of deployment specs and required permissions - similar to a pod template used in a deployment
     spec:
       permissions:
-      - serviceAccountName: memcached-operator 
+      - serviceAccountName: memcached-operator
         rules:
         - apiGroups:
           - ""
@@ -85,7 +85,7 @@ spec:
           # the rest of the rules
       # permissions required at the cluster scope
       clusterPermissions:
-      - serviceAccountName: memcached-operator 
+      - serviceAccountName: memcached-operator
         rules:
         - apiGroups:
           - ""
@@ -111,7 +111,7 @@ kind: ClusterServiceVersion
 metadata:
   name: memcached-operator.v0.10.0
 spec:
-  # ... 
+  # ...
   installModes:
   - supported: true
     type: OwnNamespace
@@ -125,7 +125,7 @@ spec:
 
 **Using `faq` to build an install strategy from an existing deployment and rbac**
 
-`faq` is a wrapper around `jq` that can handle multiple input and output formats, like the yaml we're working with now. The following example requires that [faq be installed](https://github.com/jzelinskie/faq#installation) and references [the example memcached operator](https://github.com/operator-framework/operator-sdk-samples/tree/master/memcached-operator/deploy).
+`faq` is a wrapper around `jq` that can handle multiple input and output formats, like the yaml we're working with now. The following example requires that [faq be installed](https://github.com/jzelinskie/faq#installation) and references [the example memcached operator](https://github.com/operator-framework/operator-sdk-samples/tree/master/go/memcached-operator/deploy).
 
 Here is a simple `faq` script that can generate an install strategy from a single deployment:
 
@@ -141,7 +141,7 @@ $ faq -f yaml -o yaml --slurp '.[0].spec.install = {strategy: "deployment", spec
 
 #### Defining APIs (Required)
 
-By definition, operators are programs that can talk to the Kubernetes API. Often, they are also programs that *extend* the Kubernetes API, by providing an interface via `CustomResourceDefinition`s or, less frequently, `APIService`s. 
+By definition, operators are programs that can talk to the Kubernetes API. Often, they are also programs that *extend* the Kubernetes API, by providing an interface via `CustomResourceDefinition`s or, less frequently, `APIService`s.
 
 ##### Owned APIs
 
@@ -153,10 +153,10 @@ kind: ClusterServiceVersion
 metadata:
   name: memcached-operator.v0.10.0
 spec:
-  # ... 
+  # ...
   customresourcedefinitions:
     owned:
-    # a list of CRDs that this operator owns 
+    # a list of CRDs that this operator owns
       # name is the metadata.name of the CRD
     - name: cache.example.com
       # version is the version of the CRD (one per entry)
@@ -175,7 +175,7 @@ kind: ClusterServiceVersion
 metadata:
   name: other-operator.v1.0
 spec:
-  # ... 
+  # ...
   customresourcedefinitions:
     required:
     # a list of CRDs that this operator requires
@@ -192,10 +192,10 @@ kind: ClusterServiceVersion
 metadata:
   name: memcached-operator.v0.10.0
 spec:
-  # ... 
+  # ...
   customresourcedefinitions:
     owned:
-    # a list of CRDs that this operator owns 
+    # a list of CRDs that this operator owns
       # name is the metadata.name of the CRD
     - name: cache.example.com
       # version is the version of the CRD (one per entry)
@@ -222,7 +222,7 @@ spec:
     kind: Pod
 ```
 
-The absence of any required `nativeAPIs` from a cluster will pause the installation of the operator, and `OLM` will write a status into the `CSV` indicating the missing APIs. 
+The absence of any required `nativeAPIs` from a cluster will pause the installation of the operator, and `OLM` will write a status into the `CSV` indicating the missing APIs.
 
 TODO: example status
 
