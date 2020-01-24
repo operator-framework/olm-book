@@ -28,7 +28,7 @@
 
 - [How do I install OLM?](docs/install-olm.md)
 - [How do I package my Operator for OLM?](docs/packaging-an-operator.md)
-- [How do I validate the package?](docs/)
+- [How do I validate the package?](docs/validate-package.md)
 - [How do I make my Operator part of a catalog?](docs/)
 - [How do I install my Operator with OLM?](docs/how-do-i-install-my-operator-with-olm.md)
 - [How do I list Operators available to install?](docs/list-available-operators.md)
