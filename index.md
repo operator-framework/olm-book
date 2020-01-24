@@ -57,6 +57,7 @@
 - [How should an Operator Author create and package an Operator for a singleton operand?](docs/)
 - [How do I snapshot a Quay Appregistry operator catalog?](docs/snapshot-appr-registry.md)
 - [How do I ship an operator that supports multiple node architectures?](docs/multiarch.md)
+- [How do I add an operator to a catalog?](docs/add-operator-catalog.md)
 
 ## Troubleshooting
 
