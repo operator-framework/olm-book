@@ -102,6 +102,12 @@ The `CSV` failed to install because it has been deployed in a namespace that doe
 
 The `CSV` is failing to install because it does not support he `OperatorGroup` defined in the namespace. For more information about `OperatorGroups` see [operator-scoping.md](operator-scoping.md).
 
+### Failed CSV Messages
+
+#### Messages Ending with "field is immutable"
+
+The `CSV` is failing because its install strategy changes some immutable field of an existing `Deployment`. This usually happens on upgrade, after an operator author publishes a new version of the operator containing such a change. In this case, the issue can be resolved by publishing a new version of the operator that uses a different `Deployment` name, which will cause OLM to generate a completely new `Deployment` instead of attempting to patch any existing one.
+
 ## Debugging the OLM or Catalog operators
 
 ### How to enable verbose logging on the OLM and Catalog operators
