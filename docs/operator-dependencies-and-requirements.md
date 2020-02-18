@@ -8,7 +8,7 @@ Dependencies within OLM exist when an operator will not function as intended if 
 
 OLM does not allow an operator to define a dependency on a specific version (e.g. `etcd-operator v0.9.0`) or instance (e.g. `etcd v3.2.1`) of an operator. Instead, an operator may define a dependency on a specific (Group, Version, Kind) of an API provided by a seperate operator. This encourages operator authors to depend on the interface and not the implementation; thereby allowing operators to update on individual release cycles.
 
-If a dependency is ever discovered, OLM will attempt to resolve said dependency by searching through known `CatalogSources` for an operator that `owns` the API. If an operator is found that `owns`the `required` API, OLM will attempt to deploy the operator that `owns` the API. If no `owner` is found, OLM will fail to deploy the operator with the dependency.
+If a dependency is ever discovered, OLM will attempt to resolve said dependency by searching through known `CatalogSources` for an operator that `owns` the API. If an operator is found that `owns` the `required` API, OLM will attempt to deploy the operator that `owns` the API. If no `owner` is found, OLM will fail to deploy the operator with the dependency.
 
 ### Similarity with Package Managers
 
@@ -23,20 +23,21 @@ This means that OLM will never:
 
 Dependency resolution begins when a `Subscription` is reconciled by OLM.
 
-When resolving a `Subscription`, OLM will look at all `Subscription` in the namespace and identify the next offering of each operator based on the upgrade graph. By updating all `Subscriptions` in the namespace, OLM avoids version deadlock that could be introduced when two operators have dependencies on each other.
+When resolving a `Subscription`, OLM will look at the Operator metadata (specified in its `ClusterServiceVersion`) in order to determine required APIs either from the cluster itself or other Operators (via CRDs or APIServices). Once OLM has identified the list of Operators that should be installed it will create `Subscriptions` for those in the same namespace.
 
-Once OLM has identified the list of operator that should be installed in the namespace, OLM will attempt to resolve any required APIs that are missing from the cluster by querying known `CatalogSources`.
+Throughout the existence of a `Subscription`, OLM will look at all `Subscription` objects in the namespace and detect available updates of each operators. By looking at all `Subscriptions` in the namespace at once, OLM avoids version deadlock that could be introduced when two operators have dependencies on each other.
 
-Rather than returning the first `CatalogSource` that contains the missing API, OLM will attempt to identify a  prioritized `CatalogSource` - one that provided an operator that depends on the missing API. If the prioritized `CatalogSource` does not contain the API, OLM will search through the remaining `CatalogSources` in the namespace for the API. If an operator is found that provides the API, OLM will create a `Subscription` for the operator using that `CatalogSource`.
+In case multiple Operators serve a required API, rather than using the first match, OLM searches `CatalogSources` in a specific order. First is the same catalog that contains the Operator stating the dependency, followed by other catalogs in the same namespace as the required `Subscription` and then finally all remaining `CatalogSources` objects in other namespaces of the cluster.
 
-If the required API cannot be resolved, OLM will not install operators that rely on that API.
+If are required API cannot be resolved or found, OLM will not install operators that rely on that API.
 
 ## Defining a Dependency
 
 An operator can define dependencies within its `ClusterServiceVersion (CSV)``. An operator can specify:
 
-* A `required` CRD by adding it to the `spec.customresourcedefinitions.required` field.
-* A `required` API Service by adding it to the `spec.apiservicedefinitions.required` field.
+* A `required` CRD by adding it to the `spec.customresourcedefinitions.required` list.
+* A `required` API Service by adding it to the `spec.apiservicedefinitions.required` list.
+* A `required` Cluster-provided API by adding it to the `spec.nativeapis` field
 
 > Note: If your operator defines a dependency, packaging it in the same `CatalogSource` as the operator that fulfills the dependency ensures that OLM will always resolve the dependency.
 

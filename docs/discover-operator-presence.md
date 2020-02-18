@@ -6,7 +6,7 @@ Checking the presence of custom installed operators in the cluster is simply a m
 associated with it that that contains all the details of the operator. Running `kubectl get csvs -A`
 would return all CSVs across all namespaces and provide a high-level view of all custom installed operators. 
 
-If the ClusterServiceVersion fails to show up or does not reach the `Succeeded` phase, please check the [troubleshooting documentation](https://) to debug your installation.  
+If the ClusterServiceVersion fails to show up or does not reach the `Succeeded` phase, please check the [troubleshooting documentation](troubleshooting.md) to debug your installation.  
 
 ## Finding available operators
 Operators are available from a variety of sources, or catalogs. Some catalogs are bundled in the default installation of

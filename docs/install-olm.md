@@ -53,3 +53,31 @@ catalog-operator   1/1     1            1           5m52s
 olm-operator       1/1     1            1           5m52s
 packageserver      2/2     2            2           5m43s
 ```
+
+## Verify The Default Catalog
+
+OLM ships with a default catalog of packaged Operatrs. To verify that it loaded correctly run
+
+```bash
+$ kubectl get catalogsource -n olm
+NAME                    DISPLAY               TYPE   PUBLISHER        AGE
+operatorhubio-catalog   Community Operators   grpc   OperatorHub.io   13s
+```
+
+You inspect the catalog contents by listing all the `packagemanifests` that ship with it:
+
+```bash
+kubectl get packagemanifests                                                   
+NAME                               CATALOG               AGE
+akka-cluster-operator              Community Operators   84s
+anchore-engine                     Community Operators   84s
+appsody-operator                   Community Operators   84s
+aqua                               Community Operators   84s
+atlasmap-operator                  Community Operators   84s
+aws-service                        Community Operators   84s
+awss3-operator-registry            Community Operators   84s
+banzaicloud-kafka-operator         Community Operators   84s
+[...]
+```
+
+You can now proceed to either [install an Operator](./how-do-i-install-my-operator-with-olm.md) or add your own catalog.
