@@ -26,3 +26,5 @@ spec:
 This Subscription object defines the name and namespace of the operator, as well as the catalog from which the operator
 data can be found. The channel (such as alpha, beta, or stable) helps determine which version of the operator should be installed
 from the catalog source. 
+
+It is also possible to pass configuration information to the operator via the [config](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/design/subscription-config.md) field within a Subscription.
