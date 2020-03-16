@@ -78,6 +78,10 @@ If the `Status` block does not provide enough information, check the [Catalog op
 
 `Subscriptions` cannot install operators provided by `CatalogSources` that are not in the same namespace unless the `CatalogSource` is created in the `olm` namespace.
 
+### Why does a single failing subscription cause all subscriptions in a namespace to fail?
+
+Each Subscription in a namespace acts as a part of a set of operators for the namespace - think of a Subscription as an entry in a python `requirements.txt`. If OLM is unable to resolve part of the set, it knows that resolving the entire set will fail, so it will bail out of the installation of operators for that particular namespace. Subscriptions are separate objects but within a namespace they are all synced and resolved together.
+
 ## ClusterServiceVersion Troubleshooting
 
 ### How to debug a failing CSV
