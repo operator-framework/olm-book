@@ -15,7 +15,7 @@ Some of the commands listed below assume that you have [yq](https://github.com/m
 
 It can sometimes be hard to know what exactly is failing. For this reason understanding the Architecture of OLM can be helpful in tracing what part depends on another part. Towards that end, this diagram attempts to be that tool.
 
-![Operator Lifecycle Manager data flow diagram](images/olm-flows.png)
+![Operator Lifecycle Manager data flow diagram](images/OLM-flows.png)
 
 ## CatalogSource Troubleshooting
 
