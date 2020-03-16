@@ -2,6 +2,7 @@
 
 This document focuses on troubleshooting unexpected behavior when installing and managing operators with OLM. This document contains 3 sections where we highlight how to troubleshoot specific OLM components:
 
+* [General Troubleshooting](#operator-lifecycle-manager-troubleshooting)
 * [Troubleshooting the `CatalogSource`](#catalogsource-troubleshooting)
 * [Troubleshooting the `Subscription`](#subscription-troubleshooting)
 * [Troubleshooting the `ClusterServiceVersion (CSV)`](#clusterserviceversion-troubleshooting)
@@ -9,6 +10,12 @@ This document focuses on troubleshooting unexpected behavior when installing and
 ## Prereqs
 
 Some of the commands listed below assume that you have [yq](https://github.com/mikefarah/yq) installed on your system. While `yq` is not required, it is a useful tool when parsing yaml. You can install `yq` by following the [official installation steps](https://github.com/mikefarah/yq#install).
+
+## Operator Lifecycle Manager Troubleshooting
+
+It can sometimes be hard to know what exactly is failing. For this reason understanding the Architecture of OLM can be helpful in tracing what part depends on another part. Towards that end, this diagram attempts to be that tool.
+
+![Operator Lifecycle Manager data flow diagram](images/olm-flows.png)
 
 ## CatalogSource Troubleshooting
 
