@@ -31,7 +31,7 @@ Similar work/tasks are performed by an operators. It helps us to extend the Kube
 * Reconciler: Any modification to the CR is handled by the reconcilation loop. Requeue after conflict/error with an interval defined by the re-sync period. 
 
 
-## Classification based on deployement type
+## Classification based on deployment type
 * Namespace scoped
 * Cluster scoped
 
