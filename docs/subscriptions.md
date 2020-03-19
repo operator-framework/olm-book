@@ -66,3 +66,7 @@ install-svojy   my-operator.v0.2.0                 Manual     false
 From here, you can approve `install-svojy` using the patch command shown earlier.
 
 With the new installPlan in the approve state, the `my-operator.v0.2.0` CSV will be deployed to the cluster and if the CSV reaches the `Succeeded` state the old CSV will be deleted. If the new CSV fails to reach the `Succeeded` state, both CSVs will continue to exist and it is up to the user to resolve the failure. In either case, OLM will not delete old installPlans as they act as a record of CSVs that were installed on your cluster.
+
+## How do I know when an update is available for an operator
+
+It is possible to identify when there is a newer version of an operator available by inspecting the status of the operator's subscription. The value associated with the `currentCSV` field is the newest version that is known to OLM, and `installedCSV` is the version that is installed on the cluster.
