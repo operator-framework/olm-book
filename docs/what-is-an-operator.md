@@ -1,10 +1,8 @@
 # What is an Operator?
 
-Operators are software extensions to Kubernetes that make use of custom resources to manage applications and their components. [Kubernetes documents](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
+Operators are software extensions to Kubernetes that make use of custom resources to manage applications and their operands. [Kubernetes documents](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 
-In the real world, we can define Operators: as a person who operates on some task(machine, equipment, process). Let's say it works on a given task "X". What qualities are required to peform the task X?
-
-We can classify an operator qualities into three categories:
+In the real world, we can define Operators: as a person who operates on some task(machine, equipment, process). Let's say it works on a given task "X". We can classify an operator qualities into three categories:
 
 * Observe
 * Analyze
@@ -12,7 +10,7 @@ We can classify an operator qualities into three categories:
 
 Observe the X work, analyze the state of X and finally act based on the current state of X to reach the desired state. Which will make the operators task completed, once we attain the desired state.
 
-Similar work/tasks are performed by an operators. It helps us to extend the Kubernetes API to allow custom functionality or behavior based on the needs of the consumer.
+Similar work/tasks are performed by operators. Operators help us to extend the Kubernetes API to allow custom functionality or behavior based on the needs of the consumer.
 
 # Operator Pattern 
 
@@ -39,7 +37,7 @@ Similar work/tasks are performed by an operators. It helps us to extend the Kube
 
 ![Operator workflow](images/operator-workflow.png)
 
-* Defines a namespace(namepace-scoped) for our controller
+* Defines a namespace (namepace-scoped) for our controller
 * Creates the CRD: ToDo.
 * The controller analyzes the CRD and adds it to the Kubernetes API Schema, exposes a new API end-point for the CRD, added watchers for kind CRD type.
 * Now our controller is in the running state. It watches the namespace for any changes.
