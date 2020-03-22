@@ -17,7 +17,7 @@ This is all in service of ensuring that when a user installs an operator from OL
 
 ### Starting from an existing set of operator manifests
 
-For this example, we'll use the example manifests from [the example memcached operator](https://github.com/operator-framework/operator-sdk-samples/tree/master/memcached-operator/deploy).
+For this example, we'll use the example manifests from [the example memcached operator](https://github.com/operator-framework/operator-sdk-samples/tree/master/go/memcached-operator/deploy).
 
 These manifests consist of:
 
@@ -125,7 +125,7 @@ spec:
 
 **Using `faq` to build an install strategy from an existing deployment and rbac**
 
-`faq` is a wrapper around `jq` that can handle multiple input and output formats, like the yaml we're working with now. The following example requires that [faq be installed](https://github.com/jzelinskie/faq#installation) and references [the example memcached operator](https://github.com/operator-framework/operator-sdk-samples/tree/master/memcached-operator/deploy).
+`faq` is a wrapper around `jq` that can handle multiple input and output formats, like the yaml we're working with now. The following example requires that [faq be installed](https://github.com/jzelinskie/faq#installation) and references [the example memcached operator](https://github.com/operator-framework/operator-sdk-samples/tree/master/go/memcached-operator/deploy).
 
 Here is a simple `faq` script that can generate an install strategy from a single deployment:
 

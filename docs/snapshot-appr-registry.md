@@ -17,13 +17,13 @@ As of OCP 4.3, Red Hat provided operators are distributed via appr catalogs. Cre
 ## Prerequisites
 
 - Linux
-- A version `oc` that has the `oc catalog build`, such as [this one for OCP `4.3`](https://openshift-release-artifacts.svc.ci.openshift.org/4.3.0-0.nightly-2019-11-13-233341/openshift-client-linux-4.3.0-0.nightly-2019-11-13-233341.tar.gz)
+- A version `oc` that has the `oc catalog build`, such as [this one for OCP `4.3`](https://openshift-release-artifacts.svc.ci.openshift.org/4.3/)
 - A container image registry that supports [Docker v2-2](https://docs.docker.com/registry/spec/manifest-v2-2/)
 - [grpcurl](https://github.com/fullstorydev/grpcurl) (optional, for testing)
 
 ## Setup
 
-Users should authenticate with the target image registry. By default, `oc adm catalog build` uses `~/.docker/config.json` to determine credentials. 
+Users should authenticate with the target image registry. By default, `oc adm catalog build` uses `~/.docker/config.json` to determine credentials.
 
 ## Taking a snapshot
 
