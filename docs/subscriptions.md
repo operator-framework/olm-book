@@ -19,6 +19,8 @@ spec:
 
 This Subscription object defines the name and namespace of the operator, as well as the catalog from which the operator data can be found. The channel (such as alpha, beta, or stable) helps determine which stream of the operator should be installed from the CatalogSource.
 
+It is also possible to pass configuration information to the operator via the [config](https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/design/subscription-config.md) field within a Subscription.
+
 ## Manually Approving Upgrades via Subscriptions
 
 By default, OLM will automatically approve updates to an operator as new versions become available via a CatalogSource. When creating a subscription, it is possible to disable automatic updates by setting the `approval` field to `Manual` like so:
