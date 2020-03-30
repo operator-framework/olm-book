@@ -35,6 +35,7 @@
 - [How do I uninstall an Operator?](docs/uninstall-an-operator.md)
 - [How do I discover the presence/availability of an Operator?](docs/discover-operator-presence.md)
 - [How do I uninstall OLM?](docs/uninstall-olm.md)
+- [How do I test my operator bundle?](docs/testing-bundles.md)
 
 ## Advanced Use Cases
 
