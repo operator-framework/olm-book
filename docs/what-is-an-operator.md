@@ -22,12 +22,13 @@ Similar work/tasks are performed by operators. Operators help us to extend the K
 
 ## Components: 
 
-* Controller: Register the Custom Resource Definition and adds it to the Kubernetes API Schema, exposes a new API end-point for the CRD, added watchers for the namespace to observe, runs a process/loop i.e control loop for acting based on the desired change.
+* CustomResourceDefinitions (CRD): it is a Kubernetes resource & allows you to define custom resources [CR](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#custom-resource). 
 
-* Watchers: Allows to observe the events for speific resources type.
+* Controller: it acts on the core resources such as deployments, services or user-defined (custom). It uses CRD as an input and adds it to the Kubernetes API Schema, exposes a new API end-point, can watch and manipulate custom resources, and runs a process/loop i.e control loop for acting based on the desired change.
+
+* Watchers: it gives an event interface for all changes (event types:- adds, removes updated, bookmark, and error) to resources. All object resource types are required to support consistent lists (called as ListWatch: list all events from the API server) and an incremental change notification feed called a [Watch](https://github.com/kubernetes/apimachinery/blob/master/pkg/watch/watch.go#L29).
 
 * Reconciler: Any modification to the CR is handled by the reconcilation loop. Requeue after conflict/error with an interval defined by the re-sync period. 
-
 
 ## Classification based on deployment type
 * Namespace scoped
@@ -38,8 +39,8 @@ Similar work/tasks are performed by operators. Operators help us to extend the K
 ![Operator workflow](images/operator-workflow.png)
 
 * Defines a namespace (namepace-scoped) for our controller
-* Creates the CRD: ToDo.
-* The controller analyzes the CRD and adds it to the Kubernetes API Schema, exposes a new API end-point for the CRD, added watchers for kind CRD type.
+* Create the CRD(yaml): ToDo.
+* The controller analyzes the CRD as an input and adds it to the Kubernetes API Schema, exposes a new API end-point for the CRD, added watchers for kind CR:ToDo type.
 * Now our controller is in the running state. It watches the namespace for any changes.
 * Creating an instance of the CRD, by creating a Custome Resource object (CR)
 * When a CR object is created. it triggers an event which gives control to the Reconciler loop.
