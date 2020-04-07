@@ -176,6 +176,14 @@ Documentation:
 
 `podman push -t quay.io/my-container-registry-namespace/my-manifest-bundle:<your tag here>`
 
+**Note:** Be sure to use the latest version of `podman` (or `docker`). This will ensure that your image has been pushed with the [v2schema2](https://docs.docker.com/registry/spec/manifest-v2-2/) format.  You can verify this by running one of the following commands after successfully pushing the image:
+
+```skopeo inspect --raw --creds 'username':'password' docker://<url>/<account>/<reponame>:<tag> | grep schemaVersion```
+
+```docker manifest inspect <url>/<account>/<reponame>:<tag> | grep schemaVersion```
+
+The `schemaVersion` should be set to `2`.
+
 6. Create a catalog source pointing to that bundle image on the openshift-marketplace namespace:
 
 Here's an example:
