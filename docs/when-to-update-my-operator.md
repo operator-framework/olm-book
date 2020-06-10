@@ -23,4 +23,6 @@ For example:
 $ kubectl delete pods -n olm -l olm.catalogSource=operatorhubio-catalog
 
 ```
-The operators that were installed from the catalog will be updated automatically or manually, depending on the value of `installPlanApproval` in the Subscription for the operator. For more information on approving manual updates to operators, please see [How do I approve an update?](openshift/coming-soon.md)   
+The operators that were installed from the catalog will be updated automatically or manually, depending on the value of `installPlanApproval` in the Subscription for the operator. For more information on approving manual updates to operators, please see [How do I approve an update?](openshift/coming-soon.md)
+
+> Note: If you are changing the schema of a CustomResourceDefinition, please review the [kubernetes sig-architecture's notes](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api_changes.md#on-compatibility) and the [Operator-SDK's notes](https://sdk.operatorframework.io/docs/migrating-existing-apis/) on API compatibility.
