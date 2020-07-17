@@ -44,7 +44,7 @@ kubectl -n openshift-operators get installplans
 NAME            CSV                                APPROVAL   APPROVED
 install-bfmxd   my-operator.v0.1.0                 Manual     false
 
-$ kubectl -n default patch installplan install-bfmxd -p '{"spec":{"approved":true}}' --type merge
+$ kubectl -n openshift-operators patch installplan install-bfmxd -p '{"spec":{"approved":true}}' --type merge
 installplan.operators.coreos.com/install-bfmxd patched
 
 $ kubectl -n openshift-operators get installplans
