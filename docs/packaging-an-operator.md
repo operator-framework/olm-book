@@ -2,7 +2,7 @@
 
 OLM requires you to provide metadata about your operator in order to ensure that it can be kept running safely on a cluster, and to provide information about how updates should be applied as you publish new versions of your operator.
 
-This is very similar to packaging software for a traditional operating system - think of the packaging step for OLM as the stage at which you make your `rpm`, `dep`, or `apk` bundle.
+This is very similar to packaging software for a traditional operating system - think of the packaging step for OLM as the stage at which you make your `rpm`, `deb`, or `apk` bundle.
 
 ## Writing your Operator Manifests
 
