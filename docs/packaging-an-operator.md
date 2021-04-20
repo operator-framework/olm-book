@@ -103,7 +103,7 @@ spec:
 
 `deployments` is an array - your operator may be composed of several seperate components that should all be deployed and versioned together.
 
-It's also important to tell OLM the ways in which your operator can be deployed, or its `installModes`. InstallModes indicate if your operator can be configured to watch, one, some, or all namespaces. Please see the [document on install modes]() and `OperatorGroups` for more information.
+It's also important to tell OLM the ways in which your operator can be deployed, or its `installModes`. InstallModes indicate if your operator can be configured to watch, one, some, or all namespaces. Please see the [document on install modes](operator-scoping.md) and `OperatorGroups` for more information.
 
 ```yaml
 apiVersion: operators.coreos.com/v1alpha1
